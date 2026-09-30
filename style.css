@@ -1,0 +1,204 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 24px;
+    color: #333;
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #ff7a00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* カード */
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+/* フォーム */
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="month"],
+form input[type="number"],
+form input[type="password"],
+form select {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+form button {
+    margin-top: 20px;
+    background-color: #ff7a00;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #e56e00;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+th {
+    background-color: #ff7a00;
+    color: #fff;
+}
+tr:hover td {
+    background-color: #fff5eb;
+}
+
+/* エラー・成功メッセージ */
+.message-success {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.message-error {
+    color: #c62828;
+    background-color: #ffebee;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.message-error ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* プラットフォームタグ */
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+.tag-uber_eats { background-color: #06C167; }
+.tag-demae_can { background-color: #e60012; }
+.tag-rocket_now { background-color: #1e90ff; }
+
+/* スマホ向け調整(画面幅600px以下) */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .menu-card {
+        padding: 16px 8px;
+    }
+    .menu-card .icon {
+        font-size: 26px;
+    }
+    .menu-card .label {
+        font-size: 12px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="month"],
+    form input[type="number"],
+    form input[type="password"],
+    form select {
+        max-width: 100%;
+        font-size: 16px; /* 16px以上にするとスマホでズームされにくい */
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    /* テーブルは横スクロールできるようにする */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+.chart-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 600px;
+}
+
+@media (max-width: 600px) {
+.chart-wrapper {
+    max-width: 100%;
+    height: 450px;
+    }
+}
+
+#salesChart {
+    height: 100% !important;
+}
