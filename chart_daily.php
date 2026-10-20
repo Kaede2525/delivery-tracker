@@ -231,9 +231,11 @@ if ($range === 'daily') {
                 stacked: true,
                 beginAtZero: true,
                 ticks: {
-                    autoSkip: false, // 間引きを完全に禁止
-                    stepSize: 1000,  // 1000刻みを強制
+                    maxticksLimit: 8,
                     callback: function(value) {
+                        if (value >= 10000) {
+                            return (value / 10000) + '万円';
+                        }
                         return '¥' + value.toLocaleString();
                     }
                 },
